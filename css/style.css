@@ -1,0 +1,192 @@
+/* Estilo Geral do Potifólio */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+   
+}
+
+.interface{
+    max-width: 1280px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.flex{
+    display: flex;
+}
+
+.logo img {
+    max-width:200px;
+    max-height:200px;
+    width: auto;
+    height: auto;
+}
+/* Estilo do Menu*/
+header{
+    padding: 40px 4%;
+}
+
+header> .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #918e8e;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover {
+    color: #fff;
+    transform:scale(1.05) ;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/*Efeito de Zoom no botão e logo*/
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #3CD6EB;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-contato button:hover{
+    box-shadow: 0px 0px 8px #3CD6EB;
+    transform: scale(1.05);
+}
+
+h2.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #3CD6EB;
+}
+
+header .logo img:hover{
+    box-shadow: 0px 0px 0px;
+
+}
+/* Efeito de sublinhamento*/
+    header nav li {
+        list-style-type: none;
+        white-space: nowrap;
+
+        a {
+            &:hover {
+                cursor: pointer;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0%;
+                height: 2px;
+                background-color: #3CD6EB;
+                transition: width 0.5s ease;
+            }
+
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+/* Finalizado estilo Menu*/
+
+/*inicio do estilo do topo*/
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content:center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 42px;
+    line-height: 20px;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color:hsl(187, 81%, 58%);
+    font-size: 50px;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #fff;
+    margin: 20px 0;
+}
+
+/* efeito flutuante da imagem */
+.topo-do-site .img-topo-site img{
+    max-width:500px;
+    max-height:400px;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* Estilo das espewcialidades */
+section.especialidades{
+    padding: 40px 4%;
+
+}
+
+section.especialidades .flex{
+    gap: 60px;
+}
+
+.especialidades .especialidades-box{
+    color: #fff;
+    padding: 40px;
+    border: 2px solid #fff;
+}
+
+.especialidades .especialidades-box img{
+    width: 200px;
+    height: 200px;
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+
